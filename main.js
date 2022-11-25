@@ -6,37 +6,38 @@
 const sumaPares = () =>{
   
   let n = prompt("cantidad de numeros:")
-  let resultado = 0
+  let pares = 0
+  let impares = 0
 
   for (let i = 0; i < n; i++) {
     
     let numero = Number(prompt("ingresa un numero:"))
-    if (numero % 2 === 0) resultado += numero
+    if (numero % 2 === 0) pares += numero
+    if (numero % 2 === 1) impares += numero
+
 
   }
 
-  alert(resultado);
+  alert("la suma de los numeros pares son: " + pares + " la suma de los numeros impares son: " + impares);
 }
 
 //sumaPares()
 
 //2
 
-const factorial = (numero = undefined) => {
+const factorial = () => {
 
-  if (!numero) return console.warn("numero no introducido")
-  if (typeof(numero) !== "number") return console.error(`el valor "${numero}" no es una cadena de texto`)
-
+  let numero = Number(prompt("ingresa un numero:"))
   let total = 1
   
   for (let i=1; i<=numero; i++) {
   total = total * i; 
+  }
+  
+  alert("el factorial es: " + numero)
+
 }
 
-  return total
-}
 
-let numero = Number(prompt("ingresa un numero:"))
-
-alert("el factorial es: " + factorial(numero))
+factorial()
 
